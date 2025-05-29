@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Tools</title>
+    <style>
+        body { font-family: monospace; background: #1a1a1a; color: #00ff00; padding: 20px; }
+        pre { background: #2a2a2a; padding: 15px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Available Tools</h1>
+    <pre>{
+  "tools": [
+    {
+      "name": "list_directory", 
+      "description": "List files and directories",
+      "endpoint": "https://promote-subscription-toolkit-wagon.trycloudflare.com/tools/list_directory",
+      "parameters": {"path": "directory path (optional, defaults to current)"}
+    },
+    {
+      "name": "run_command",
+      "description": "Execute shell commands", 
+      "endpoint": "https://promote-subscription-toolkit-wagon.trycloudflare.com/tools/run_command",
+      "parameters": {"command": "shell command to execute"}
+    }
+  ]
+}</pre>
+</body>
+</html>
