@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Directory Browser</h1>
+        <div class="controls">
+            <input type="text" id="api-url" placeholder="Enter your API URL" 
+                   value="https://your-app-url.com/tools/list_directory">
+            <button onclick="fetchDirectory()">Load Directory</button>
+            <button onclick="refreshDirectory()">Refresh</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="directory-listing" class="directory-listing"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

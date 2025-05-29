@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#api-url {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #003300;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004400;
+}
+
+.status {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+.status.loading {
+    background-color: #333300;
+    color: #ffff00;
+}
+
+.status.error {
+    background-color: #330000;
+    color: #ff0000;
+}
+
+.status.success {
+    background-color: #003300;
+    color: #00ff00;
+}
+
+.directory-info {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #00ff00;
+}
+
+.directory-items {
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.directory-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s;
+}
+
+.directory-item:hover {
+    background-color: #2a2a2a;
+}
+
+.directory-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: bold;
+    flex: 1;
+}
+
+.item-details {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.file-icon {
+    margin-right: 8px;
+}
+
+.directory-item.file .file-icon::before {
+    content: "📄";
+}
+
+.directory-item.directory .file-icon::before {
+    content: "📁";
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+    
+    .item-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
