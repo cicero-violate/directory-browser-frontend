@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Available Tools</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Browser</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Available Tools</h1>
-    <pre>
-{
-  "tools": [
-    {
-      "name": "list_directory", 
-      "description": "List files and directories",
-      "endpoint": " https://easier-diamond-furthermore-venture.trycloudflare.com/tools/list_directory",
-      "parameters": {"path": "directory path (optional, defaults to current)"}
-    },
-    {
-      "name": "run_command",
-      "description": "Execute shell commands", 
-      "endpoint": " https://easier-diamond-furthermore-venture.trycloudflare.com/tools/run_command",
-      "parameters": {"command": "shell command to execute"}
-    }
-  ]
-}
-    </pre>
+    <div class="container">
+        <h1>Directory Browser</h1>
+        <div class="controls">
+            <input type="text" id="api-url" placeholder="Enter your API URL" 
+                   value="https://easier-diamond-furthermore-venture.trycloudflare.com/tools/list_directory">
+            <button onclick="fetchDirectory()">Load Directory</button>
+            <button onclick="refreshDirectory()">Refresh</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="directory-listing" class="directory-listing"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
