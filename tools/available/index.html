@@ -14,16 +14,18 @@
     {
       "name": "list_directory", 
       "description": "List files and directories",
-      "endpoint": "https://promote-subscription-toolkit-wagon.trycloudflare.com/tools/list_directory",
+      "endpoint": "/tools/list_directory",
       "parameters": {"path": "directory path (optional, defaults to current)"}
     },
     {
       "name": "run_command",
       "description": "Execute shell commands", 
-      "endpoint": "https://promote-subscription-toolkit-wagon.trycloudflare.com/tools/run_command",
+      "endpoint": "/tools/run_command",
       "parameters": {"command": "shell command to execute"}
     }
-  ]
+  ],
+  "base_url": "Contact user for current tunnel URL",
+  "note": "This API runs locally with a tunnel. Request the current base URL from the user."
 }</pre>
 </body>
 </html>
