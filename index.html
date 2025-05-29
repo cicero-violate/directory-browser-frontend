@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory Browser</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Available Tools</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Directory Browser</h1>
-        <div class="controls">
-            <input type="text" id="api-url" placeholder="Enter your API URL" 
-                   value="https://promote-subscription-toolkit-wagon.trycloudflare.com/tools/list_directory">
-            <button onclick="fetchDirectory()">Load Directory</button>
-            <button onclick="refreshDirectory()">Refresh</button>
-        </div>
-        <div id="status" class="status"></div>
-        <div id="directory-listing" class="directory-listing"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Available Tools</h1>
+    <pre>
+{
+  "tools": [
+    {
+      "name": "list_directory", 
+      "description": "List files and directories",
+      "endpoint": "https://your-tunnel-url.com/tools/list_directory",
+      "parameters": {"path": "directory path (optional, defaults to current)"}
+    },
+    {
+      "name": "run_command",
+      "description": "Execute shell commands", 
+      "endpoint": "https://your-tunnel-url.com/tools/run_command",
+      "parameters": {"command": "shell command to execute"}
+    }
+  ]
+}
+    </pre>
 </body>
 </html>
